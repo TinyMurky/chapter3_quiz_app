@@ -1,52 +1,45 @@
 import 'package:flutter/material.dart';
 
+import 'package:chapter3_quiz_app/quiz.dart';
+
 void main() {
-  runApp(const QuizApp());
+  runApp(const Quiz());
 }
 
-class QuizApp extends StatelessWidget {
-  const QuizApp({super.key});
+/// move to quiz dart and be statefull widget
+// class QuizApp extends StatelessWidget {
+//   const QuizApp({super.key});
 
-  @override
-  Widget build(BuildContext context) {
-    final theme = ThemeData(
-      useMaterial3: true,
-      brightness: Brightness.dark,
-      colorSchemeSeed: Color.fromRGBO(94, 110, 227, 1),
-    );
+//   @override
+//   Widget build(BuildContext context) {
+//     final theme = ThemeData(
+//       useMaterial3: true,
+//       brightness: Brightness.dark,
+//       colorSchemeSeed: const Color.fromARGB(255, 142, 155, 251),
+//     );
 
-    return MaterialApp(
-      theme: theme,
-      home: Scaffold(
-        backgroundColor: theme.colorScheme.primaryContainer,
-        appBar: AppBar(
-          backgroundColor: theme.colorScheme.primaryContainer,
-        ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              const Image(
-                image: AssetImage('assets/images/quiz-logo.png'),
-                width: 250,
-              ),
-              const SizedBox(
-                height: 48,
-              ),
-              const Padding(
-                padding: EdgeInsets.fromLTRB(0, 12.0, 0, 48.0),
-                child: Text(
-                  'Learn Flutter the fun way!',
-                ),
-              ),
-              OutlinedButton(
-                onPressed: () {},
-                child: const Text('Start Quiz'),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
+//     return MaterialApp(
+//       theme: theme,
+//       home: Scaffold(
+//         // backgroundColor: theme.colorScheme.primaryContainer,
+//         // appBar: AppBar(
+//         //   backgroundColor: theme.colorScheme.primaryContainer,
+//         // ),
+//         body: Container(
+//           // center 不能const
+//           decoration: BoxDecoration(
+//             gradient: LinearGradient(
+//               colors: [
+//                 theme.colorScheme.primaryContainer,
+//                 const Color.fromARGB(255, 142, 155, 251)
+//               ],
+//               begin: Alignment.topLeft,
+//               end: Alignment.bottomRight,
+//             ),
+//           ),
+//           child: const StartScreen(),
+//         ),
+//       ),
+//     );
+//   }
+// }
