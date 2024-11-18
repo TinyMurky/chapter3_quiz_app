@@ -1,1 +1,1 @@
-enum AppScreen { start, quiz }
+enum AppScreen { start, quiz, result }
